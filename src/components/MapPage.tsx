@@ -289,10 +289,13 @@ export function MapPage({ data, error }: { data: LayerData; error: string | null
               type="button"
               onClick={() => setSidebarOpen((open) => !open)}
               aria-expanded={sidebarOpen}
-              className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-white/80 bg-white/95 px-3 text-[11px] font-semibold text-[#24565B] shadow-[0_4px_18px_-8px_rgba(36,86,91,0.4)] transition-colors hover:bg-[#edf2ef] sm:h-11 sm:px-4"
+              aria-label={sidebarOpen ? 'Tutup lapisan peta' : 'Buka lapisan peta'}
+              className="group inline-flex h-9 min-w-9 items-center justify-center rounded-full border border-white/80 bg-white/95 px-2 text-[11px] font-semibold text-[#24565B] shadow-[0_4px_18px_-8px_rgba(36,86,91,0.4)] transition-all duration-200 hover:bg-[#edf2ef] hover:px-3 focus-visible:bg-[#edf2ef] focus-visible:px-3"
             >
               <Icon name={sidebarOpen ? 'close' : 'layers'} size={17} />
-              {sidebarOpen ? 'Tutup' : 'Lapisan'}
+              <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-200 group-hover:ml-2 group-hover:max-w-[64px] group-hover:opacity-100 group-focus-visible:ml-2 group-focus-visible:max-w-[64px] group-focus-visible:opacity-100">
+                {sidebarOpen ? 'Tutup' : 'Lapisan'}
+              </span>
             </button>
           </div>
         </div>
