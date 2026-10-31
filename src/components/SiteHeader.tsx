@@ -15,7 +15,7 @@ export function SiteHeader({ overHero = false }: { overHero?: boolean }) {
             <span>Profil Desa Teluk Bakau</span>
             <span className={overHero ? 'text-white/65' : 'text-white/65'}>Berbasis Geospasial</span>
           </span>
-          <span className="min-w-0 text-[10px] font-semibold uppercase leading-[1.35] tracking-[0.05em] sm:hidden">Teluk Bakau<br />Geospasial</span>
+          <span className="min-w-0 text-[10px] font-semibold uppercase leading-[1.35] tracking-[0.05em] sm:hidden">Profil Desa Teluk Bakau<br />Geospasial</span>
         </a>
 
         <nav aria-label="Navigasi utama" className="flex shrink-0 items-center gap-3 text-[10px] font-medium sm:gap-5 sm:text-[12px] lg:gap-8">
