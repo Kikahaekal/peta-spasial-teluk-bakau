@@ -1,0 +1,31 @@
+{
+"type": "FeatureCollection",
+"name": "FASILITAS_INFRASTRUKTUR",
+"features": [
+{ "type": "Feature", "properties": { "Name": 50, "X": 104.652688, "Y": 1.02434, "Kelas": "Meseum", "Kondisi": "Butuh Perbaikan" }, "geometry": { "type": "Point", "coordinates": [ 104.652688, 1.02434 ] } },
+{ "type": "Feature", "properties": { "Name": 51, "X": 104.646753, "Y": 1.018917, "Kelas": "Taman Baca Masyarakat", "Kondisi": "Butuh Perbaikan + Penambahan Fasilitas" }, "geometry": { "type": "Point", "coordinates": [ 104.646753, 1.018917 ] } },
+{ "type": "Feature", "properties": { "Name": 52, "X": 104.646813, "Y": 1.018983, "Kelas": "Masjid", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.646813, 1.018983 ] } },
+{ "type": "Feature", "properties": { "Name": 53, "X": 104.651826, "Y": 1.020384, "Kelas": "Perdagangan", "Kondisi": "Mudah Dijangkau" }, "geometry": { "type": "Point", "coordinates": [ 104.651826, 1.020384 ] } },
+{ "type": "Feature", "properties": { "Name": 54, "X": 104.65221, "Y": 1.025472, "Kelas": "Masjid", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.65221, 1.025472 ] } },
+{ "type": "Feature", "properties": { "Name": 55, "X": 104.64881, "Y": 1.027268, "Kelas": "Paud", "Kondisi": "Cukup Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.64881, 1.027268 ] } },
+{ "type": "Feature", "properties": { "Name": 56, "X": 104.645438, "Y": 1.028612, "Kelas": "Kampung Teripang", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.645438, 1.028612 ] } },
+{ "type": "Feature", "properties": { "Name": 57, "X": 104.643441, "Y": 1.034374, "Kelas": "Musholla", "Kondisi": "Tidak Layak" }, "geometry": { "type": "Point", "coordinates": [ 104.643441, 1.034374 ] } },
+{ "type": "Feature", "properties": { "Name": 58, "X": 104.652873, "Y": 1.026796, "Kelas": "Toko Sinar Rezeki", "Kondisi": "Baik, Akses Mudah" }, "geometry": { "type": "Point", "coordinates": [ 104.652873, 1.026796 ] } },
+{ "type": "Feature", "properties": { "Name": 59, "X": 104.655611, "Y": 1.031718, "Kelas": "Hotel", "Kondisi": "Akses Mudah" }, "geometry": { "type": "Point", "coordinates": [ 104.655611, 1.031718 ] } },
+{ "type": "Feature", "properties": { "Name": 60, "X": 104.656473, "Y": 1.033693, "Kelas": "SDN 003", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.656473, 1.033693 ] } },
+{ "type": "Feature", "properties": { "Name": 61, "X": 104.656487, "Y": 1.033674, "Kelas": "Musholla", "Kondisi": "Cukup" }, "geometry": { "type": "Point", "coordinates": [ 104.656487, 1.033674 ] } },
+{ "type": "Feature", "properties": { "Name": 62, "X": 104.656879, "Y": 1.03421, "Kelas": "Jongrace", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.656879, 1.03421 ] } },
+{ "type": "Feature", "properties": { "Name": 63, "X": 104.656541, "Y": 1.036487, "Kelas": "Pantai", "Kondisi": "Baik Sekali" }, "geometry": { "type": "Point", "coordinates": [ 104.656541, 1.036487 ] } },
+{ "type": "Feature", "properties": { "Name": 64, "X": 104.649766, "Y": 1.052057, "Kelas": "Pantai Sadi", "Kondisi": "Akses Mudah" }, "geometry": { "type": "Point", "coordinates": [ 104.649766, 1.052057 ] } },
+{ "type": "Feature", "properties": { "Name": 65, "X": 104.649333, "Y": 1.052884, "Kelas": "Klenteng", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.649333, 1.052884 ] } },
+{ "type": "Feature", "properties": { "Name": 66, "X": 104.651169, "Y": 1.054702, "Kelas": "Pelantar", "Kondisi": "Cukup" }, "geometry": { "type": "Point", "coordinates": [ 104.651169, 1.054702 ] } },
+{ "type": "Feature", "properties": { "Name": 67, "X": 104.650721, "Y": 1.061287, "Kelas": "Hotel", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.650721, 1.061287 ] } },
+{ "type": "Feature", "properties": { "Name": 68, "X": 104.646537, "Y": 1.067643, "Kelas": "Masjid", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.646537, 1.067643 ] } },
+{ "type": "Feature", "properties": { "Name": 69, "X": 104.640124, "Y": 1.070611, "Kelas": "Hutan", "Kondisi": "Gersang" }, "geometry": { "type": "Point", "coordinates": [ 104.640124, 1.070611 ] } },
+{ "type": "Feature", "properties": { "Name": 70, "X": 104.645294, "Y": 1.062213, "Kelas": "Masjid", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.645294, 1.062213 ] } },
+{ "type": "Feature", "properties": { "Name": 71, "X": 104.650497, "Y": 1.06081, "Kelas": "Drainase", "Kondisi": "Prihatin" }, "geometry": { "type": "Point", "coordinates": [ 104.650497, 1.06081 ] } },
+{ "type": "Feature", "properties": { "Name": 72, "X": 104.648462, "Y": 1.054377, "Kelas": "TPS", "Kondisi": "Kurang Fasilitas + Butuh Penambahan" }, "geometry": { "type": "Point", "coordinates": [ 104.648462, 1.054377 ] } },
+{ "type": "Feature", "properties": { "Name": 73, "X": 104.656367, "Y": 1.034841, "Kelas": "Polindes", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.656367, 1.034841 ] } },
+{ "type": "Feature", "properties": { "Name": 74, "X": 104.656101, "Y": 1.034145, "Kelas": "Posyandu", "Kondisi": "Baik" }, "geometry": { "type": "Point", "coordinates": [ 104.656101, 1.034145 ] } }
+]
+}

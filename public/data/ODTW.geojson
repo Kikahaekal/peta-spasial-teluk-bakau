@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "ODTW",
+"features": [
+{ "type": "Feature", "properties": { "REMARK": "Pariwisata/Rekreasi Pantai" }, "geometry": { "type": "Point", "coordinates": [ 104.6459907, 1.0693927, 0.0 ] } },
+{ "type": "Feature", "properties": { "REMARK": "Pariwisata/Rekreasi Pantai" }, "geometry": { "type": "Point", "coordinates": [ 104.6570066, 1.0314266, 0.0 ] } },
+{ "type": "Feature", "properties": { "REMARK": "Pariwisata/Rekreasi Pantai" }, "geometry": { "type": "Point", "coordinates": [ 104.6557103, 1.0387439, 0.0 ] } },
+{ "type": "Feature", "properties": { "REMARK": "Pariwisata/Rekreasi Pantai" }, "geometry": { "type": "Point", "coordinates": [ 104.6543292, 1.0485943, 0.0 ] } },
+{ "type": "Feature", "properties": { "REMARK": "Pariwisata/Rekreasi Pantai" }, "geometry": { "type": "Point", "coordinates": [ 104.6745462, 1.0666179, 0.0 ] } },
+{ "type": "Feature", "properties": { "REMARK": "Pariwisata/Rekreasi Pantai" }, "geometry": { "type": "Point", "coordinates": [ 104.6760699, 1.0495747, 0.0 ] } },
+{ "type": "Feature", "properties": { "REMARK": "Pariwisata/Rekreasi Pantai" }, "geometry": { "type": "Point", "coordinates": [ 104.7082218, 1.0517801, 0.0 ] } }
+]
+}

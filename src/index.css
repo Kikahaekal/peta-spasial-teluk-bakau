@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  html {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  button,
+  a,
+  input {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #eef2ed;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+}
+
+.leaflet-popup-content {
+  margin: 16px 18px;
+  min-width: 210px;
+  max-width: 280px;
+}
+
+.map-point-icon {
+  border: 0;
+  background: transparent;
+}
+
+.map-marker {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+  border: 2px solid #fff;
+  border-radius: 50% 50% 50% 8px;
+  background: var(--marker-color);
+  box-shadow: 0 3px 9px rgb(11 60 73 / 35%);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.map-marker svg {
+  width: 19px;
+  height: 19px;
+  transform: rotate(45deg);
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.leaflet-marker-icon:hover .map-marker {
+  transform: rotate(-45deg) scale(1.12);
+  box-shadow: 0 5px 13px rgb(11 60 73 / 42%);
+}
+
+.map-popup__category {
+  display: inline-block;
+  color: #66817b;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.map-popup__title {
+  margin: 4px 0 10px;
+  color: #24565b;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.map-popup__details {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.map-popup__row {
+  display: grid;
+  gap: 2px;
+}
+
+.map-popup__row dt {
+  color: #718783;
+  font-size: 10px;
+}
+
+.map-popup__row dd {
+  margin: 0;
+  color: #294b49;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.map-popup__empty {
+  margin: 0;
+  color: #718783;
+  font-size: 11px;
+}
