@@ -265,13 +265,23 @@ export function MapPage({ data, error }: { data: LayerData; error: string | null
             <span>Kembali</span>
           </a>
 
-          <div className="pointer-events-auto ml-auto flex shrink-0 flex-col gap-2">
-            <div className="flex flex-col overflow-hidden rounded-xl border border-white/80 bg-white/95 shadow-[0_4px_18px_-8px_rgba(11,60,73,0.4)]">
-              <button type="button" onClick={() => mapRef.current?.zoomIn()} aria-label="Perbesar peta" className="flex h-8 w-8 items-center justify-center text-[#24565B] transition-colors hover:bg-[#edf2ef] sm:h-9 sm:w-9">
+          <div className="pointer-events-auto ml-auto flex shrink-0 flex-col items-end gap-2">
+            <div className="flex flex-col overflow-hidden rounded-full border border-white/80 bg-white/95 shadow-[0_4px_18px_-8px_rgba(11,60,73,0.4)]">
+              <button
+                type="button"
+                onClick={() => mapRef.current?.zoomIn()}
+                aria-label="Perbesar peta"
+                className="flex h-9 w-9 items-center justify-center text-[#24565B] transition-colors hover:bg-[#edf2ef]"
+              >
                 <Icon name="plus" size={16} />
               </button>
-              <span className="border-t border-[#e7ece9]" />
-              <button type="button" onClick={() => mapRef.current?.zoomOut()} aria-label="Perkecil peta" className="flex h-8 w-8 items-center justify-center text-[#24565B] transition-colors hover:bg-[#edf2ef] sm:h-9 sm:w-9">
+              <span className="mx-2 border-t border-[#e7ece9]" />
+              <button
+                type="button"
+                onClick={() => mapRef.current?.zoomOut()}
+                aria-label="Perkecil peta"
+                className="flex h-9 w-9 items-center justify-center text-[#24565B] transition-colors hover:bg-[#edf2ef]"
+              >
                 <Icon name="minus" size={16} />
               </button>
             </div>
