@@ -275,23 +275,19 @@ export function MapPage({ data, error }: { data: LayerData; error: string | null
                 <Icon name="minus" size={17} />
               </button>
             </div>
-            <button type="button" onClick={() => boundsRef.current && mapRef.current?.fitBounds(boundsRef.current, { padding: [36, 36] })} aria-label="Kembali ke seluruh wilayah" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/80 bg-white/95 text-[#24565B] shadow-[0_4px_18px_-8px_rgba(36,86,91,0.4)] transition-colors hover:bg-[#edf2ef] sm:h-11 sm:w-11">
-              <Icon name="target" size={17} />
+            <button
+              type="button"
+              onClick={() => setSidebarOpen((open) => !open)}
+              aria-expanded={sidebarOpen}
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-white/80 bg-white/95 px-3 text-[11px] font-semibold text-[#24565B] shadow-[0_4px_18px_-8px_rgba(36,86,91,0.4)] transition-colors hover:bg-[#edf2ef] sm:h-11 sm:px-4"
+            >
+              <Icon name={sidebarOpen ? 'close' : 'layers'} size={17} />
+              {sidebarOpen ? 'Tutup' : 'Lapisan'}
             </button>
           </div>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setSidebarOpen((open) => !open)}
-          aria-expanded={sidebarOpen}
-          className="absolute bottom-5 left-4 z-[600] inline-flex h-11 items-center gap-2 rounded-full border border-white/80 bg-white/95 px-4 text-[11px] font-semibold text-[#24565B] shadow-[0_4px_18px_-8px_rgba(36,86,91,0.4)] transition-colors hover:bg-white sm:bottom-6 sm:left-6"
-        >
-          <Icon name={sidebarOpen ? 'close' : 'layers'} size={17} />
-          {sidebarOpen ? 'Tutup' : 'Lapisan'}
-        </button>
-
-        <aside className={`absolute bottom-[72px] left-3 z-[600] flex max-h-[min(65%,520px)] w-[min(320px,calc(100%-24px))] flex-col overflow-hidden rounded-2xl border border-white/70 bg-white/95 shadow-[0_14px_40px_-18px_rgba(11,60,73,0.45)] backdrop-blur transition-all sm:bottom-[78px] sm:left-6 ${sidebarOpen ? 'visible translate-y-0 opacity-100' : 'invisible translate-y-2 opacity-0'}`}>
+        <aside className={`absolute right-3 top-[153px] z-[600] flex max-h-[min(65%,520px)] w-[min(320px,calc(100%-24px))] flex-col overflow-hidden rounded-2xl border border-white/70 bg-white/95 shadow-[0_14px_40px_-18px_rgba(11,60,73,0.45)] backdrop-blur transition-all sm:right-5 sm:top-[169px] ${sidebarOpen ? 'visible translate-y-0 opacity-100' : 'invisible translate-y-2 opacity-0'}`}>
           <div className="flex items-center justify-between border-b border-[#e8eeeb] px-4 py-3">
             <div>
               <h1 className="text-[13px] font-semibold text-[#24565B]">Lapisan peta</h1>
