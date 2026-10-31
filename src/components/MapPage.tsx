@@ -267,12 +267,12 @@ export function MapPage({ data, error }: { data: LayerData; error: string | null
 
           <div className="pointer-events-auto ml-auto flex shrink-0 flex-col gap-2">
             <div className="flex flex-col overflow-hidden rounded-full border border-white/80 bg-white/95 shadow-[0_4px_18px_-8px_rgba(11,60,73,0.4)]">
-              <button type="button" onClick={() => mapRef.current?.zoomIn()} aria-label="Perbesar peta" className="flex h-10 w-10 items-center justify-center text-[#24565B] transition-colors hover:bg-[#edf2ef] sm:h-11 sm:w-11">
-                <Icon name="plus" size={17} />
+              <button type="button" onClick={() => mapRef.current?.zoomIn()} aria-label="Perbesar peta" className="flex h-12 w-12 items-center justify-center text-[#24565B] transition-colors hover:bg-[#edf2ef] sm:h-14 sm:w-14">
+                <Icon name="plus" size={22} />
               </button>
               <span className="mx-2 border-t border-[#e7ece9]" />
-              <button type="button" onClick={() => mapRef.current?.zoomOut()} aria-label="Perkecil peta" className="flex h-10 w-10 items-center justify-center text-[#24565B] transition-colors hover:bg-[#edf2ef] sm:h-11 sm:w-11">
-                <Icon name="minus" size={17} />
+              <button type="button" onClick={() => mapRef.current?.zoomOut()} aria-label="Perkecil peta" className="flex h-12 w-12 items-center justify-center text-[#24565B] transition-colors hover:bg-[#edf2ef] sm:h-14 sm:w-14">
+                <Icon name="minus" size={22} />
               </button>
             </div>
             <button
