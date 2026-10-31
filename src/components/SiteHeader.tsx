@@ -7,12 +7,12 @@ export function SiteHeader({ overHero = false }: { overHero?: boolean }) {
   return (
     <header className={`relative z-[1000] w-full ${overHero ? 'text-white' : 'bg-[#24565B] text-white'}`}>
       <div className="mx-auto flex min-h-[76px] max-w-[1440px] items-center justify-between gap-3 px-4 sm:min-h-[88px] sm:px-8 lg:px-12">
-        <a href="/" aria-label="Profil Teluk Bakau, beranda" className={`flex min-w-0 items-center gap-2.5 sm:gap-3 ${textColor}`}>
+        <a href="/" aria-label="Profil Desa Teluk Bakau, beranda" className={`flex min-w-0 items-center gap-2.5 sm:gap-3 ${textColor}`}>
           <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-md text-[8px] font-bold uppercase tracking-[0.08em] sm:h-11 sm:w-11 sm:text-[9px] ${overHero ? 'border-white/70 text-white' : 'border-white/60  text-white'}`}>
             <img src={logo_umrah} alt="Logo Umrah" />
           </span>
           <span className="hidden min-w-0 flex-col text-[10px] font-semibold uppercase leading-[1.5] tracking-[0.08em] sm:flex lg:text-[11px]">
-            <span>Profil Teluk Bakau</span>
+            <span>Profil Desa Teluk Bakau</span>
             <span className={overHero ? 'text-white/65' : 'text-white/65'}>Berbasis Geospasial</span>
           </span>
           <span className="min-w-0 text-[10px] font-semibold uppercase leading-[1.35] tracking-[0.05em] sm:hidden">Teluk Bakau<br />Geospasial</span>
