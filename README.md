@@ -2,6 +2,12 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Deploy ke cPanel
+
+Jalankan `npm run build`, lalu unggah **isi folder `dist`** ke document root domain di cPanel (biasanya `public_html`). Pastikan file `.htaccess` ikut diunggah; file tersebut mengarahkan route aplikasi seperti `/peta` ke `index.html`, sehingga halaman peta tetap dapat dibuka langsung atau saat halaman dimuat ulang.
+
+Jika `/peta` masih menampilkan 404, periksa bahwa Apache mengaktifkan `mod_rewrite`, `.htaccess` diizinkan pada document root, dan file `.htaccess` tidak tersembunyi atau terlewat saat proses upload.
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
