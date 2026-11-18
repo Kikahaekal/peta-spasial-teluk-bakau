@@ -1,4 +1,4 @@
-import type { LayerData } from '../types/geo'
+import type { GeoRecord } from '../types/geo'
 import { Icon } from './Icon'
 import { GeoMapPreview } from './GeoMapPreview'
 import { SiteHeader } from './SiteHeader'
@@ -15,7 +15,7 @@ function LogoPlaceholder({ label, img }: { label: string, img: string }) {
   )
 }
 
-export function LandingPage({ data, error }: { data: LayerData; error: string | null }) {
+export function LandingPage({ data, error }: { data: GeoRecord[]; error: string | null }) {
   return (
     <div className="min-h-screen bg-white text-[#24565B]">
       <main>

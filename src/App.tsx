@@ -1,16 +1,21 @@
 import { useEffect, useState } from 'react'
-import { EMPTY_DATA, loadGeoData } from './data/layers'
-import type { LayerData } from './types/geo'
+import { loadGeoData } from './lib/geoRecords'
+import type { GeoRecord } from './types/geo'
 import { LandingPage } from './components/LandingPage'
 import { MapPage } from './components/MapPage'
+import { AdminPage } from './components/AdminPage'
 
 function App() {
-  const [data, setData] = useState<LayerData>(EMPTY_DATA)
+  const [data, setData] = useState<GeoRecord[]>([])
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
-  const mapPage = window.location.pathname.replace(/\/+$/, '') === '/peta'
+  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+  const mapPage = path === '/peta'
+  const adminPage = path === '/admin'
 
   useEffect(() => {
+    if (adminPage) return
+
     let isMounted = true
     loadGeoData()
       .then((loadedData) => {
@@ -28,8 +33,9 @@ function App() {
     return () => {
       isMounted = false
     }
-  }, [])
+  }, [adminPage])
 
+  if (adminPage) return <AdminPage />
   if (mapPage) return <MapPage data={data} error={error} />
   return <LandingPage data={data} error={error ?? (loading ? 'Memuat data spasial...' : null)} />
 }

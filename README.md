@@ -2,6 +2,31 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Supabase dan admin
+
+Aplikasi membaca data publik dari tabel `public.peta_spasial`. Struktur tabel:
+
+| Kolom | Tipe | Fungsi |
+| --- | --- | --- |
+| `filename` | `uuid` | Primary key dan ID GeoJSON; dibuat otomatis |
+| `geojson` | `jsonb` | GeoJSON mentah dalam format `FeatureCollection` |
+| `created_at` | `timestamptz` | Waktu pembuatan; diisi otomatis |
+
+1. Pastikan `.env.local` memiliki `VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY` (anon/publishable key, bukan service-role key).
+2. Jalankan SQL pada `supabase/peta_spasial.sql` melalui Supabase SQL Editor. Skrip ini mengaktifkan RLS, memberi akses baca publik, dan membatasi perubahan data untuk admin.
+3. Buat akun admin melalui Supabase Authentication. Tetapkan `role: admin` pada **App Metadata** akun tersebut (bukan User Metadata, karena User Metadata dapat diubah pemilik akun). Jika mengaturnya lewat SQL Editor, gunakan:
+
+   ```sql
+   UPDATE auth.users
+   SET raw_app_meta_data = COALESCE(raw_app_meta_data, '{}'::jsonb) || '{"role":"admin"}'::jsonb
+   WHERE email = 'email-admin-anda';
+   ```
+
+   Setelah role diperbarui, keluar lalu masuk kembali agar token sesi memuat role terbaru.
+4. Buka `/admin` dan masuk dengan akun tersebut. Jika tabel masih kosong, tombol **Impor 6 data publik** menyalin GeoJSON dari `public/data` ke database. Setelah itu peta utama membaca data langsung dari Supabase. Pengelolaan mendukung tambah, edit, dan hapus GeoJSON.
+
+Database hanya menyimpan GeoJSON mentah, UUID, dan waktu pembuatan; nama kategori/berkas asal tidak disimpan. Karena itu, peta menampilkan setiap baris sebagai satu lapisan dengan UUID-nya.
+
 ## Deploy ke cPanel
 
 Jalankan `npm run build`, lalu unggah **isi folder `dist`** ke document root domain di cPanel (biasanya `public_html`). Pastikan file `.htaccess` ikut diunggah; file tersebut mengarahkan route aplikasi seperti `/peta` ke `index.html`, sehingga halaman peta tetap dapat dibuka langsung atau saat halaman dimuat ulang.
